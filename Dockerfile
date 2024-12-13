@@ -1,5 +1,4 @@
-#@follow_tag(registry.redhat.io/rhel9-4-els/rhel-minimal)
-FROM registry.redhat.io/rhel9-4-els/rhel-minimal:9.4-124
+FROM registry.access.redhat.com/ubi9/ubi-minimal
 
 LABEL com.redhat.component="dpdk-base-container" \
     name="dpdk-base" \
