@@ -1,8 +1,8 @@
-FROM registry.access.redhat.com/ubi9/ubi-minimal:latest@sha256:7d4e47500f28ac3a2bff06c25eff9127ff21048538ae03ce240d57cf756acd00
+FROM registry.access.redhat.com/ubi10/ubi-minimal:latest
 
 LABEL com.redhat.component="dpdk-base-container" \
-    name="openshift4/dpdk-base-rhel9" \
-    cpe="cpe:/a:redhat:openshift:4.22::el9" \
+    name="openshift4/dpdk-base-rhel10" \
+    cpe="cpe:/a:redhat:openshift:5.0::el10" \
     version="${CI_CONTAINER_VERSION}" \
     summary="dpdk-base" \
     io.openshift.expose-services="" \
@@ -18,10 +18,10 @@ ENV \
     # The $HOME is not set by default, but some applications needs this variable
     HOME=/opt/app-root/src \
     PATH=$PATH:/opt/app-root/src/bin:/opt/app-root/bin \
-    PLATFORM="el9"
+    PLATFORM="el10"
 
 ENV BUILDER_VERSION 0.1
-ENV DPDK_VER 23.11-1
+ENV DPDK_VER 24.11-1
 ENV DPDK_DIR /usr/share/dpdk
 ENV RTE_TARGET=x86_64-default-linux-gcc
 ENV RTE_EXEC_ENV=linux

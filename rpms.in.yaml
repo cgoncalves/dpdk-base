@@ -1,24 +1,24 @@
 contentOrigin:
   repos:
-    - repoid: ubi-9-for-$basearch-baseos-rpms
-      baseurl: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/$basearch/baseos/os
+    - repoid: ubi-10-for-$basearch-baseos-rpms
+      baseurl: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/$basearch/baseos/os
       varsFromContainerfile: Dockerfile
       sslverify: 1
       priority: 1
-    - repoid: ubi-9-for-$basearch-appstream-rpms
-      baseurl: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi9/9/$basearch/appstream/os
+    - repoid: ubi-10-for-$basearch-appstream-rpms
+      baseurl: https://cdn-ubi.redhat.com/content/public/ubi/dist/ubi10/10/$basearch/appstream/os
       varsFromContainerfile: Dockerfile
       sslverify: 1
       priority: 1
-    - repoid: rhel-9-for-$basearch-baseos-rpms
-      baseurl: https://cdn.redhat.com/content/dist/rhel9/{version}/$basearch/baseos/os
+    - repoid: rhel-10-for-$basearch-baseos-rpms
+      baseurl: https://cdn.redhat.com/content/dist/rhel10/{version}/$basearch/baseos/os
       varsFromContainerfile: Dockerfile
       sslverify: 1
       sslcacert: /etc/rhsm/ca/redhat-uep.pem
       sslclientkey: $SSL_CLIENT_KEY
       sslclientcert: $SSL_CLIENT_CERT
-    - repoid: rhel-9-for-$basearch-appstream-rpms
-      baseurl: https://cdn.redhat.com/content/dist/rhel9/{version}/$basearch/appstream/os
+    - repoid: rhel-10-for-$basearch-appstream-rpms
+      baseurl: https://cdn.redhat.com/content/dist/rhel10/{version}/$basearch/appstream/os
       varsFromContainerfile: Dockerfile
       sslverify: 1
       sslcacert: /etc/rhsm/ca/redhat-uep.pem
